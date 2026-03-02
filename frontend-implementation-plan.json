@@ -1,0 +1,26 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Clarify and fix admin panel login credentials",
+  "requirements": [
+    {
+      "id": "REQ-13",
+      "summary": "Remove username field from admin login, display password-only hint, and ensure correct backend password verification",
+      "acceptanceCriteria": [
+        "The admin login form has only a password field — no username field is present.",
+        "A visible hint or label on the login page informs the user that only a password is needed.",
+        "The backend verifyAdminPassword function is called with the correct hardcoded password and returns true, allowing access.",
+        "Entering the correct password grants access to the admin dashboard.",
+        "Entering an incorrect password displays a clear error message.",
+        "The known issue 'Admin panel login credentials unclear to user' is resolved."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Admin.tsx",
+          "operation": "modify",
+          "description": "Remove the username field from the admin login form, keeping only the password input. Update the form label to clearly indicate 'Admin Password' and add a helper text or info message above or below the password field stating 'No username required — enter the admin password only.' Ensure the form calls verifyAdminPassword with only the password value. Update error messaging to clearly indicate 'Invalid password' instead of 'Invalid credentials'."
+        }
+      ]
+    }
+  ]
+}

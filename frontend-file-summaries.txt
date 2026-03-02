@@ -1,0 +1,22 @@
+{
+  "frontend/src/index.css": "Global styles with OKLCH dark theme tokens for Gadgets Gear — deep charcoal background, amber/gold accent, and Inter/Space Grotesk font imports with utility classes for gradients and card hover effects.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending the theme with Inter/Space Grotesk font families, a full gold color scale, surface color tokens, and custom shadow/animation utilities for the dark e-commerce design system.",
+  "frontend/src/contexts/CartContext.tsx": "React context providing persistent shopping cart state (via localStorage) with add, remove, update quantity, clear, and total calculation functions.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for all backend product operations plus admin/mutation hooks — `useVerifyAdmin` now correctly calls `actor.verifyAdminPassword(password)` with only a password argument, matching the backend interface.",
+  "frontend/src/lib/utils.ts": "Utility functions including cn() for class merging, formatPrice() for currency display, and getProductImageUrl() for generating reliable product image URLs.",
+  "frontend/src/components/ProductCard.tsx": "Reusable product card component displaying image, brand badge, name, description, price, and an inline Add to Cart button with stock status handling.",
+  "frontend/src/components/Header.tsx": "Sticky navigation header with GadgetsGear logo, desktop/mobile nav links to Electronics and Watches, search bar with navigation, and cart icon with item count badge.",
+  "frontend/src/components/Footer.tsx": "Site footer with brand info, shop links, store policies, a new \"Store Management\" section with an Admin Panel link to /admin, copyright year, and caffeine.ai attribution.",
+  "frontend/src/pages/Home.tsx": "Homepage with hero banner, trust badges strip, category cards for Electronics and Watches, featured products grid from backend, and a CTA banner section.",
+  "frontend/src/pages/ProductListing.tsx": "Category product listing page with responsive grid, desktop filter sidebar and mobile sheet, price range slider, brand checkboxes, sort dropdown, and active filter chips.",
+  "frontend/src/pages/ProductDetail.tsx": "Product detail page with image, brand/category badges, price, stock status, quantity selector, Add to Cart button with feedback, and breadcrumb navigation.",
+  "frontend/src/pages/Cart.tsx": "Shopping cart page listing items with quantity controls, line totals, order summary with shipping calculation, and Proceed to Checkout button.",
+  "frontend/src/pages/Checkout.tsx": "Multi-section checkout form collecting shipping address and payment info with validation, order summary sidebar, and simulated order submission.",
+  "frontend/src/pages/CheckoutConfirmation.tsx": "Order confirmation page with success icon, generated order number, order progress steps, and navigation back to home or shopping.",
+  "frontend/src/pages/SearchResults.tsx": "Search results page reading the query param from URL, filtering all products client-side by name/description/brand, and displaying results in a responsive grid.",
+  "frontend/src/App.tsx": "Main app component with TanStack Router setup including all existing routes plus the new /admin route rendering the Admin page, wrapped in CartProvider with shared Layout.",
+  "frontend/src/components/AdminProductForm.tsx": "Modal dialog form for creating and editing products with fields for name, brand, category, description, price (in cents), stock, and image URL — includes validation, pre-fill for edit mode, and calls addProduct/updateProduct mutations.",
+  "frontend/src/components/AdminDeleteConfirmation.tsx": "Alert dialog confirmation component that prompts the user before deleting a product, showing the product name and calling the deleteProduct mutation on confirmation.",
+  "frontend/src/components/AdminProductTable.tsx": "Admin product management table displaying all products with name, brand, category, price, stock, and Edit/Delete action buttons, plus an \"Add Product\" button that opens the form modal.",
+  "frontend/src/pages/Admin.tsx": "Password-only admin login page with the username field removed, an info notice explaining no username is needed, and the form wired to pass only the password to `useVerifyAdmin`. Persists session in localStorage and renders the AdminProductTable dashboard on success."
+}

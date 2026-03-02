@@ -1,0 +1,43 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-03-01T20:44:19.945Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 1,
+    "implemented": 1,
+    "items": [
+      {
+        "id": "REQ-13",
+        "summary": "Inspect the backend verifyAdminPassword function to confirm the hardcoded admin password, then update the Admin login page to remove any username field (since authentication is password-only) and ensure the login form clearly labels the single 'Password' input. Display a helper hint on the login page indicating there is no username — only a password is required.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Admin.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Admin.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/pages/Admin.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

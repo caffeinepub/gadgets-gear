@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Dark theme - Gadgets Gear */
+    --background: 0.12 0.005 260;
+    --foreground: 0.97 0.005 260;
+
+    --card: 0.16 0.006 260;
+    --card-foreground: 0.97 0.005 260;
+
+    --popover: 0.18 0.006 260;
+    --popover-foreground: 0.97 0.005 260;
+
+    --primary: 0.78 0.17 75;
+    --primary-foreground: 0.12 0.005 260;
+
+    --secondary: 0.22 0.008 260;
+    --secondary-foreground: 0.85 0.005 260;
+
+    --muted: 0.20 0.006 260;
+    --muted-foreground: 0.58 0.01 260;
+
+    --accent: 0.78 0.17 75;
+    --accent-foreground: 0.12 0.005 260;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    --border: 0.26 0.008 260;
+    --input: 0.22 0.008 260;
+    --ring: 0.78 0.17 75;
+
+    --chart-1: 0.78 0.17 75;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+
+    --sidebar: 0.14 0.006 260;
+    --sidebar-foreground: 0.97 0.005 260;
+    --sidebar-primary: 0.78 0.17 75;
+    --sidebar-primary-foreground: 0.12 0.005 260;
+    --sidebar-accent: 0.20 0.006 260;
+    --sidebar-accent-foreground: 0.85 0.005 260;
+    --sidebar-border: 0.26 0.008 260;
+    --sidebar-ring: 0.78 0.17 75;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, oklch(0.78 0.17 75), oklch(0.88 0.14 85));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .card-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px oklch(0 0 0 / 0.4);
+  }
+
+  .gold-glow {
+    box-shadow: 0 0 20px oklch(0.78 0.17 75 / 0.3);
+  }
+}

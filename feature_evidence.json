@@ -1,0 +1,24 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-inspect-the-backend-verifyadminpassword-function-to-confirm-the-hardcoded-admin-password-then-update-the-admin-login-page-to-remove-any-username-field-since-authentication-is-password-only-and-ensure-the-login-form-clearly-labels-the-single-password-input-display-a-helper-hint-on-the-login-page-indicating-there-is-no-username-only-a-password-is-required",
+      "featureTitle": "Inspect the backend verifyAdminPassword function to confirm the hardcoded admin password, then update the Admin login page to remove any username field (since authentication is password-only) and ensure the login form clearly labels the single 'Password' input. Display a helper hint on the login page indicating there is no username — only a password is required.",
+      "files": [
+        "frontend/src/pages/Admin.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

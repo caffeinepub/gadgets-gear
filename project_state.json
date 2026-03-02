@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "An online electronics and watches store website called Gadgets Gear. The site will showcase and sell electronics and watches online.",
+  "architectural_notes": [
+    "Store name: Gadgets Gear — online electronics and watches retailer",
+    "Website type: e-commerce storefront"
+  ],
+  "known_issues": [
+    "Admin panel login credentials unclear to user — admin authentication requires clarification on username/password setup"
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-create-a-homepage-featuring-a-full-width-hero-banner-with-promotional-messaging-a-featured-products-section-showcasing-top-electronics-and-watches-and-a-category-section-with-clearly-labeled-cards-for-electronics-and-watches-that-link-to-their-respective-listing-pages",
+      "title": "Create a homepage featuring a full-width hero banner with promotional messaging, a featured products section showcasing top electronics and watches, and a category section with clearly labeled cards for 'Electronics' and 'Watches' that link to their respective listing pages.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-product-listing-page-for-each-category-electronics-and-watches-that-displays-products-in-a-grid-layout-with-filter-options-e-g-price-range-brand-and-sorting-controls-e-g-price-low-to-high-newest",
+      "title": "Build a product listing page for each category (Electronics and Watches) that displays products in a grid layout with filter options (e.g., price range, brand) and sorting controls (e.g., price low-to-high, newest).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-product-detail-page-that-shows-a-product-image-gallery-full-description-price-stock-status-and-an-add-to-cart-button",
+      "title": "Build a product detail page that shows a product image gallery, full description, price, stock status, and an 'Add to Cart' button.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-persistent-shopping-cart-that-tracks-added-products-and-quantities-with-a-cart-page-showing-item-list-subtotal-per-item-order-total-and-a-checkout-flow-with-a-form-for-shipping-and-payment-details",
+      "title": "Implement a persistent shopping cart that tracks added products and quantities, with a cart page showing item list, subtotal per item, order total, and a checkout flow with a form for shipping and payment details.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-global-navigation-header-with-the-gadgets-gear-logo-wordmark-a-search-bar-for-searching-products-a-cart-icon-with-item-count-badge-and-navigation-links-to-the-electronics-and-watches-category-pages",
+      "title": "Create a global navigation header with the Gadgets Gear logo/wordmark, a search bar for searching products, a cart icon with item count badge, and navigation links to the Electronics and Watches category pages.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-sleek-modern-dark-themed-visual-design-with-a-deep-charcoal-near-black-background-crisp-white-and-light-gray-typography-amber-gold-accent-color-for-highlights-and-ctas-and-a-clean-sans-serif-typeface-enforce-this-theme-consistently-across-all-pages-and-components",
+      "title": "Apply a sleek, modern dark-themed visual design with a deep charcoal/near-black background, crisp white and light-gray typography, amber/gold accent color for highlights and CTAs, and a clean sans-serif typeface. Enforce this theme consistently across all pages and components.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-password-protected-admin-panel-frontend-page-at-route-admin-on-first-visit-show-a-login-form-with-a-password-field-on-successful-authentication-verified-against-the-backend-verifyadminpassword-function-store-the-session-in-localstorage-and-display-the-full-admin-dashboard-on-failed-authentication-show-an-error-message-include-a-logout-button-that-clears-the-session",
+      "title": "Create a password-protected admin panel frontend page at route /admin. On first visit, show a login form with a password field. On successful authentication (verified against the backend verifyAdminPassword function), store the session in localStorage and display the full admin dashboard. On failed authentication, show an error message. Include a logout button that clears the session.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-product-management-table-in-the-admin-dashboard-that-lists-all-products-with-columns-for-name-category-brand-price-stock-and-actions-include-an-add-product-button-that-opens-a-form-modal-to-create-a-new-product-with-fields-for-name-category-electronics-or-watches-description-price-brand-imageurl-and-stock-quantity-each-row-should-have-edit-and-delete-action-buttons-the-edit-button-opens-a-pre-filled-form-modal-to-update-the-product-the-delete-button-prompts-a-confirmation-dialog-before-removing-the-product",
+      "title": "Build a product management table in the admin dashboard that lists all products with columns for name, category, brand, price, stock, and actions. Include an 'Add Product' button that opens a form/modal to create a new product with fields for name, category (Electronics or Watches), description, price, brand, imageUrl, and stock quantity. Each row should have Edit and Delete action buttons. The Edit button opens a pre-filled form/modal to update the product. The Delete button prompts a confirmation dialog before removing the product.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-link-to-the-admin-panel-admin-in-the-site-footer-labeled-admin-under-a-staff-or-store-management-section-so-administrators-can-easily-locate-the-panel",
+      "title": "Add a link to the admin panel (/admin) in the site footer, labeled 'Admin' under a staff or store management section, so administrators can easily locate the panel.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-inspect-the-backend-verifyadminpassword-function-to-confirm-the-hardcoded-admin-password-then-update-the-admin-login-page-to-remove-any-username-field-since-authentication-is-password-only-and-ensure-the-login-form-clearly-labels-the-single-password-input-display-a-helper-hint-on-the-login-page-indicating-there-is-no-username-only-a-password-is-required",
+      "title": "Inspect the backend verifyAdminPassword function to confirm the hardcoded admin password, then update the Admin login page to remove any username field (since authentication is password-only) and ensure the login form clearly labels the single 'Password' input. Display a helper hint on the login page indicating there is no username — only a password is required.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Homepage with featured products, hero banner, and categories (electronics & watches)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Product listing pages for electronics and watches with filters and sorting",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Product detail page with images, description, price, and add-to-cart",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Shopping cart and checkout flow",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Navigation header with logo, search bar, cart icon, and category links",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Implement backend data storage for products with fields: id, name, category (electronics | watches), description, price, brand, imageUrl, and stock quantity. Expose query functions to list all products, list by category, and get a single product by id.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Pre-populate the backend with at least 8 sample products — a mix of electronics (e.g., headphones, smartphones, laptops) and watches (e.g., smartwatch, analog dress watch) — with realistic names, descriptions, prices, and placeholder image URLs.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Build a password-protected admin panel to add, edit, delete products and manage categories",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Extend the backend actor to support full CRUD operations for products: add a new product, update an existing product's name, description, price, brand, imageUrl, stock quantity, and category, and delete a product by ID. Store products in a mutable HashMap rather than a static map so changes persist across calls. Add an admin password verification function that accepts a password string and returns a boolean.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Gadgets Gear",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "build_request",
+  "title": "Clarify and fix admin panel login credentials",
+  "projectName": "Gadgets Gear",
+  "priority": "high",
+  "requirements": [
+    {
+      "id": "REQ-13",
+      "text": "Inspect the backend verifyAdminPassword function to confirm the hardcoded admin password, then update the Admin login page to remove any username field (since authentication is password-only) and ensure the login form clearly labels the single 'Password' input. Display a helper hint on the login page indicating there is no username — only a password is required.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-6",
+          "msg-7",
+          "msg-8"
+        ],
+        "quotes": [
+          "I am typing user name and password to sign in but it's saying invalid",
+          "What is my user name",
+          "Ok check it quick"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The admin login form has only a password field — no username field is present.",
+        "A visible hint or label on the login page informs the user that only a password is needed.",
+        "The backend verifyAdminPassword function is called with the correct hardcoded password and returns true, allowing access.",
+        "Entering the correct password grants access to the admin dashboard.",
+        "Entering an incorrect password displays a clear error message.",
+        "The known issue 'Admin panel login credentials unclear to user' is resolved."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not change the existing admin authentication flow beyond fixing the credential mismatch.",
+    "Do not modify files in frontend/src/hooks/ or frontend/src/components/ui."
+  ],
+  "nonGoals": [
+    "Adding multi-user or role-based authentication.",
+    "Integrating Internet Identity for admin login.",
+    "Changing any product management or CRUD functionality."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
